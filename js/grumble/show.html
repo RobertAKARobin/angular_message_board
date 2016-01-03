@@ -5,6 +5,6 @@
   <img class="img-responsive img-rounded" ng-src="{{ grumble.photoUrl }}" alt="{{ grumble.title }}" />
   <div>
     <button class="btn btn-xs" data-ng-click="grumble.vm.toggleForm()">Update Grumble</button>
-    <button class="btn btn-danger btn-xs" data-ng-click="grumble.vm.destroyConfirm()" data-confirm="Are you sure?">Delete</button>
+    <button class="btn btn-danger btn-xs" data-ng-click="destroyConfirm()" data-confirm="Are you sure?">Delete</button>
   </div>
 </div>

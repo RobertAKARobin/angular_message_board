@@ -12,7 +12,11 @@
         grumble: "="
       },
       link: function(scope, element, attributes){
-
+        scope.destroyConfirm = function(){
+          if(window.confirm("Are you sure?")){
+            scope.grumble.vm.destroy();
+          }
+        }
       }
     }
   }

@@ -8,13 +8,7 @@
   GrumbleFn.$inject = ["$firebase"];
 
   function GrumbleFn($firebase){
-    var Grumble = new $firebase("grumbles", {
-      destroyConfirm: function(){
-        if(window.confirm("Are you sure?")){
-          this.destroy();
-        }
-      }
-    });
+    var Grumble = new $firebase("grumbles");
     return Grumble;
   }
 })();
