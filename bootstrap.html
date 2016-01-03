@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/underscore/underscore-min.js"></script>
+  <script src="bower_components/handlebars/handlebars.min.js"></script>
+  <script src="bower_components/backbone/backbone-min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/backbone/routers/grumble.js"></script>
+  <script src="js/backbone/models/comment.js"></script>
+  <script src="js/backbone/models/grumble.js"></script>
+  <script src="js/backbone/collections/comments.js"></script>
+  <script src="js/backbone/collections/grumbles.js"></script>
+  <script src="js/backbone/views/comment.js"></script>
+  <script src="js/backbone/views/grumble.js"></script>
+  <script src="js/backbone/views/grumbleList.js"></script>
+  <script src="js/backbone/views/grumbleCreate.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="css/captainVonBootsTrapp.css">
+  <title>Grumblr</title>
+  <style>
+
+  </style>
+</head>
+<body class="container">
+  <header class="jumbotron row" id="createGrumble">
+    <div class="col-md-4">
+      <h1>Grumblr</h1>
+      <p>Like Tumblr, but grumblier.</p>
+      <p><button class="new btn btn-primary btn-block">New Grumble</button></p>
+    </div>
+    <div class="col-md-8">
+      <div class="formContainer"></div>
+    </div>
+  </header>
+
+  <main id="grumbles">
+  </main>
+
+  <script id="grumbleTemplate" type="text/x-handlebars-template">
+    <div class="clearfix row">
+      <div class="col-md-6 well">
+        <h2>{{ title }}</h2>
+        <p class="lead">by: {{ authorName }}</p>
+        <p>
+          <button class="edit btn btn-xs">Update Grumble</button>
+          <button class="delete btn btn-danger btn-xs">Delete</button>
+        </p>
+        <p>{{ content }}</p>
+        <img class="img-responsive img-rounded" src="{{ photoUrl }}" alt="">
+      </div>
+      <div class="col-md-6">
+        <div class="comments"></div>
+        <form class="commentForm">
+          <div class="form-horizontal">
+            <fieldset>
+              <label>Commenter Name:</label>
+              <div><input type="text" name="authorName"></div>
+            </fieldset>
+            <fieldset>
+              <label>Content:</label>
+              <div><input type="text" name="content"></div>
+            </fieldset>
+            <button class="btn btn-block">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <hr />
+  </script>
+
+  <script id="grumbleFormTemplate" type="text/x-handlebars-template">
+    <form class="grumbleForm">
+      <div class="form-horizontal">
+        <fieldset>
+          <label>Title:</label>
+          <div><input type="text" name="title" value="{{ title }}"></div>
+        </fieldset>
+        <fieldset>
+          <label>By:</label>
+          <div><input type="text" name="authorName" value="{{ authorName }}"></div>
+        </fieldset>
+        <fieldset>
+          <label>Content:</label>
+          <div><textarea name="content">{{ content }}</textarea></div>
+        </fieldset>
+        <fieldset>
+          <label>Photo URL:</label>
+          <div><input type="text" name="photoUrl" value="{{ photoUrl }}"></div>
+        </fieldset>
+        <fieldset>
+          <label>&nbsp;</label>
+          <div>
+            <button class="btn submit btn-primary">Submit</button>
+            <button class="btn cancel">Cancel</button>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+  </script>
+
+  <script id="commentTemplate" type="text/x-handlebars-template">
+    <p>{{ content }}</p>
+    <p><small>by {{ authorName }} <a class="deleteComment text-warning">(Delete)</a></small></p>
+    <hr />
+  </script>
+
+</body>
+</html>
