@@ -7,7 +7,7 @@
 
   function grumbleSaveFn(){
     return {
-      templateUrl: "js/grumble/save.directive.html",
+      templateUrl: "js/grumble/save.html",
       scope: {
         grumble: "="
       },

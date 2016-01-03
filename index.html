@@ -17,24 +17,16 @@
     <script src="js/grumble/index.controller.js"></script>
     <script src="js/grumble/save.directive.js"></script>
     <script src="js/grumble/show.directive.js"></script>
+    <script src="js/grumble/header.directive.js"></script>
 
     <script src="js/comment/comment.module.js"></script>
     <script src="js/comment/comment.factory.js"></script>
     <script src="js/comment/save.directive.js"></script>
     <script src="js/comment/show.directive.js"></script>
   </head>
-  <body data-ng-app="grumblr" class="container" data-ng-controller="GrumbleIndexController as GrumbleViewModel">
-    <header class="jumbotron row">
-      <div class="col-md-4">
-        <h1>Grumblr</h1>
-        <p>Like Tumblr, but grumblier.</p>
-        <button data-ng-hide="GrumbleViewModel.newGrumble.vm.activeForm" class="btn btn-primary" data-ng-click="GrumbleViewModel.newGrumble.vm.toggleForm()">New Grumble</button>
-      </div>
-      <div class="col-md-8">
-        <div data-ng-show="GrumbleViewModel.newGrumble.vm.activeForm" data-grumble-save data-grumble="GrumbleViewModel.newGrumble"></div>
-      </div>
-    </header>
-    <main>
+  <body data-ng-app="grumblr" class="container">
+    <header data-grumble-header></header>
+    <main data-ng-controller="GrumbleIndexController as GrumbleViewModel">
       <div data-ng-repeat="grumble in GrumbleViewModel.grumbles">
         <div class="grumble clearfix row">
           <div class="col-md-5 well">

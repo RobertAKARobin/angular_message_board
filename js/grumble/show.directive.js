@@ -7,7 +7,7 @@
 
   function grumbleShowFn(){
     return {
-      templateUrl: "js/grumble/show.directive.html",
+      templateUrl: "js/grumble/show.html",
       scope: {
         grumble: "="
       },

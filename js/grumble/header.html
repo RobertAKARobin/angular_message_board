@@ -1,0 +1,10 @@
+<header class="jumbotron row">
+  <div class="col-md-4">
+    <h1>Grumblr</h1>
+    <p>Like Tumblr, but grumblier.</p>
+    <button data-ng-hide="newGrumble.vm.activeForm" class="btn btn-primary" data-ng-click="newGrumble.vm.toggleForm()">New Grumble</button>
+  </div>
+  <div class="col-md-8">
+    <div data-ng-show="newGrumble.vm.activeForm" data-grumble-save data-grumble="newGrumble"></div>
+  </div>
+</header>
