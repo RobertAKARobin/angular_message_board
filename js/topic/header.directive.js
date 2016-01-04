@@ -15,8 +15,8 @@
         loadNewTopic();
         function loadNewTopic(){
           var newTopic = Topic.new(), saveFn = newTopic.vm.save;
-          scope.newTopic = newTopic;
-          newTopic.vm.save = function(){
+          scope.topic = newTopic;
+          scope.topic.vm.save = function(){
             saveFn(loadNewTopic);
           }
         }

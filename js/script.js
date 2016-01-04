@@ -1,6 +1,6 @@
 "use strict";
 
-var firebaseURL = "https://wdidc.firebaseio.com/";
+var firebaseURL = "https://robertakarobin-ng-mb.firebaseio.com/";
 
 (function(){
   var scripts = {

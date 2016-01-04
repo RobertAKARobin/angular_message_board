@@ -12,20 +12,20 @@
     <header data-topic-header></header>
     <main data-ng-controller="TopicIndexController as TopicViewModel">
       <div data-ng-repeat="topic in TopicViewModel.topics">
-        <div class="topic clearfix row">
+        <div class="clearfix row">
           <div class="col-md-5 well">
             <div data-ng-hide="topic.vm.activeForm">
-              <div data-topic-show data-topic="topic"></div>
+              <div data-topic-show></div>
             </div>
             <div data-ng-show="topic.vm.activeForm">
-              <div data-topic-save data-topic="topic"></div>
+              <div data-topic-save></div>
             </div>
           </div>
           <div class="col-md-7">
             <div data-ng-repeat="comment in topic.comments">
-              <div data-comment-show data-topic="topic" data-comment="comment"></div>
+              <div data-comment-show></div>
             </div>
-            <div data-comment-save data-topic="topic"></div>
+            <div data-comment-save></div>
           </div>
         </div>
       </div>

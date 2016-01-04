@@ -1,9 +1,9 @@
 <header class="jumbotron row">
   <div class="col-md-4">
     <h1>Discuss</h1>
-    <button data-ng-hide="newTopic.vm.activeForm" class="btn btn-primary" data-ng-click="newTopic.vm.toggleForm()">New Topic</button>
+    <button data-ng-hide="topic.vm.activeForm" class="btn btn-primary" data-ng-click="topic.vm.toggleForm()">New Topic</button>
   </div>
   <div class="col-md-8">
-    <div data-ng-show="newTopic.vm.activeForm" data-topic-save data-topic="newTopic"></div>
+    <div data-ng-show="topic.vm.activeForm" data-topic-save></div>
   </div>
 </header>

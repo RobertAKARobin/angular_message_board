@@ -10,10 +10,7 @@
   function commentSaveFn(Comment){
     return {
       templateUrl: "js/comment/save.html",
-      scope: {
-        topic: "="
-      },
-      link: function(scope, element, attributes){
+      link: function(scope){
         scope.save = function(){
           scope.topic.comments.push(scope.comment);
           scope.topic.vm.save(loadNewComment);

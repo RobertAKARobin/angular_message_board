@@ -7,13 +7,7 @@
 
   function topicSaveFn(){
     return {
-      templateUrl: "js/topic/save.html",
-      scope: {
-        topic: "="
-      },
-      link: function(scope, element, attributes){
-
-      }
+      templateUrl: "js/topic/save.html"
     }
   }
 })();
