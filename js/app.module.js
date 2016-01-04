@@ -2,9 +2,9 @@
 
 (function() {
   angular
-  .module("grumblr", [
+  .module("messageBoard", [
     "firebase",
-    "grumble",
+    "topic",
     "comment"
   ]);
 })()

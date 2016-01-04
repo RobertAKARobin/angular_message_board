@@ -8,9 +8,9 @@ var firebaseURL = "https://wdidc.firebaseio.com/";
       "app.module",
       "firebase.factory"
     ],
-    "js/grumble/": [
-      "grumble.module",
-      "grumble.factory",
+    "js/topic/": [
+      "topic.module",
+      "topic.factory",
       "index.controller",
       "save.directive",
       "show.directive",
@@ -25,7 +25,7 @@ var firebaseURL = "https://wdidc.firebaseio.com/";
   };
   loadScripts();
   angular.element(document.head).ready(function(){
-    angular.bootstrap(document, ["grumblr"]);
+    angular.bootstrap(document, ["messageBoard"]);
   });
 
   function loadScripts(){

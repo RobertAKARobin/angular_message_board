@@ -1,0 +1,22 @@
+<div>
+  <fieldset>
+    <label>Title:</label>
+    <div><input type="text" name="title" data-ng-model="topic.title"></div>
+  </fieldset>
+  <fieldset>
+    <label>By:</label>
+    <div><input type="text" name="authorName" data-ng-model="topic.authorName"></div>
+  </fieldset>
+  <fieldset>
+    <label>Content:</label>
+    <div><textarea name="content" data-ng-model="topic.content"></textarea></div>
+  </fieldset>
+  <fieldset>
+    <label>Photo URL:</label>
+    <div><input type="text" name="photoUrl" data-ng-model="topic.photoUrl"></div>
+  </fieldset>
+</div>
+<div>
+  <button class="btn btn-xs cancel" data-ng-click="topic.vm.toggleForm()">Cancel</button>
+  <button class="btn btn-xs submit btn-primary" data-ng-click="topic.vm.save()">Submit</button>
+</div>

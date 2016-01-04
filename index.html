@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Grumblr</title>
+    <title>Discuss</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
@@ -9,16 +9,16 @@
     <script src="js/script.js"></script>
   </head>
   <body class="container">
-    <header data-grumble-header></header>
-    <main data-ng-controller="GrumbleIndexController as GrumbleViewModel">
-      <div data-ng-repeat="grumble in GrumbleViewModel.grumbles">
-        <div class="grumble clearfix row">
+    <header data-topic-header></header>
+    <main data-ng-controller="TopicIndexController as TopicViewModel">
+      <div data-ng-repeat="topic in TopicViewModel.topics">
+        <div class="topic clearfix row">
           <div class="col-md-5 well">
-            <div data-ng-hide="grumble.vm.activeForm">
-              <div data-grumble-show data-grumble="grumble"></div>
+            <div data-ng-hide="topic.vm.activeForm">
+              <div data-topic-show data-topic="topic"></div>
             </div>
-            <div data-ng-show="grumble.vm.activeForm">
-              <div data-grumble-save data-grumble="grumble"></div>
+            <div data-ng-show="topic.vm.activeForm">
+              <div data-topic-save data-topic="topic"></div>
             </div>
           </div>
           <div class="col-md-7">

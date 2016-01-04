@@ -2,19 +2,19 @@
 
 (function(){
   angular
-  .module("grumble")
-  .directive("grumbleShow", grumbleShowFn);
+  .module("topic")
+  .directive("topicShow", topicShowFn);
 
-  function grumbleShowFn(){
+  function topicShowFn(){
     return {
-      templateUrl: "js/grumble/show.html",
+      templateUrl: "js/topic/show.html",
       scope: {
-        grumble: "="
+        topic: "="
       },
       link: function(scope, element, attributes){
         scope.destroyConfirm = function(){
           if(window.confirm("Are you sure?")){
-            scope.grumble.vm.destroy();
+            scope.topic.vm.destroy();
           }
         }
       }

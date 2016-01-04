@@ -2,7 +2,7 @@
 
 (function(){
   angular
-  .module("grumblr")
+  .module("messageBoard")
   .factory("$firebase", $firebaseFn);
 
   $firebaseFn.$inject = ["$firebaseObject", "$firebaseArray"];
