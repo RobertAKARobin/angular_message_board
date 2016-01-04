@@ -2,9 +2,9 @@
   <h2>{{ topic.title }}</h2>
   <p class="lead">by: {{ topic.authorName }}</p>
   <p>{{ topic.content }}</p>
-  <img class="img-responsive img-rounded" ng-src="{{ topic.photoUrl }}" alt="{{ topic.title }}" />
-  <div>
+  <p>
     <button class="btn btn-xs" data-ng-click="topic.vm.toggleForm()">Update Topic</button>
     <button class="btn btn-danger btn-xs" data-ng-click="destroyConfirm()" data-confirm="Are you sure?">Delete</button>
-  </div>
+  </p>
+  <img class="img-responsive img-rounded" ng-src="{{ topic.photoUrl }}" alt="{{ topic.title }}" />
 </div>

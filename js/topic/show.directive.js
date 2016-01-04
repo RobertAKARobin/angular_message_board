@@ -12,6 +12,7 @@
         topic: "="
       },
       link: function(scope, element, attributes){
+        if(!scope.topic.comments) scope.topic.comments = [];
         scope.destroyConfirm = function(){
           if(window.confirm("Are you sure?")){
             scope.topic.vm.destroy();
