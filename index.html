@@ -3,28 +3,12 @@
   <head>
     <title>Grumblr</title>
     <link rel="stylesheet" href="css/style.css" />
-
-    <script>var firebaseURL = "https://wdidc.firebaseio.com/";</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/1.1.3/angularfire.min.js"></script>
-
-    <script src="js/app.module.js"></script>
-    <script src="js/firebase.factory.js"></script>
-
-    <script src="js/grumble/grumble.module.js"></script>
-    <script src="js/grumble/grumble.factory.js"></script>
-    <script src="js/grumble/index.controller.js"></script>
-    <script src="js/grumble/save.directive.js"></script>
-    <script src="js/grumble/show.directive.js"></script>
-    <script src="js/grumble/header.directive.js"></script>
-
-    <script src="js/comment/comment.module.js"></script>
-    <script src="js/comment/comment.factory.js"></script>
-    <script src="js/comment/save.directive.js"></script>
-    <script src="js/comment/show.directive.js"></script>
+    <script src="js/script.js"></script>
   </head>
-  <body data-ng-app="grumblr" class="container">
+  <body class="container">
     <header data-grumble-header></header>
     <main data-ng-controller="GrumbleIndexController as GrumbleViewModel">
       <div data-ng-repeat="grumble in GrumbleViewModel.grumbles">
